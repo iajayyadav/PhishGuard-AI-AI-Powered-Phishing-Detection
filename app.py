@@ -54,10 +54,10 @@ def analyze():
     try:
        
         response = requests.post(
-          f"https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent?key={API_KEY}",
+          f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={API_KEY}",
             headers={"Content-Type": "application/json"},
             json={"contents": [{"parts": [{"text": prompt}]}]},
-            timeout=10  # 2. Add a timeout for network requests
+            timeout=10  
         )
 
       
